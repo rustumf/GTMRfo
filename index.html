@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>GTM Test v15</h1>
+<h1>GTM Test v17</h1>
   
 <script>
 // URL to Paste in search and change param values if need be
@@ -34,30 +34,16 @@ function APILocation() {
             location = "https://httpbin.org/get?key=" + dataLayer[0].key + "&value=" + dataLayer[0].value;   
 };
   
-
-    function APILocation2() {
-
-        location = "https://httpbin.org/get?key=" + dataLayer[0].key + "&value=" + dataLayer[0].value;
-      
-        let xmlhttp = new XMLHttpRequest();
-        xmlhttp.open('POST', location, true);
-
-        xmlhttp.onreadystatechange = function () {
-
-                              alert(xmlhttp.responseText);
-
-          
-            if (xmlhttp.readyState == 4) {
-
-                if (xmlhttp.status == 200) {
-
-                    alert(xmlhttp.responseText);
-
-                }
-            }
-        };
-
-    };  
+function APILocation2() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     alert(this.responseText);
+    }
+  };
+  xhttp.open("GET", "https://httpbin.org/get?key=" + dataLayer[0].key + "&value=" + dataLayer[0].value, true);
+  xhttp.send();
+}
 
 </script>
   
