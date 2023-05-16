@@ -34,9 +34,31 @@ function APILocation() {
             location = "https://httpbin.org/get?key=" + dataLayer[0].key + "&value=" + dataLayer[0].value;   
 };
   
+
+    function APILocation2() {
+
+        location = "https://httpbin.org/get?key=" + dataLayer[0].key + "&value=" + dataLayer[0].value;
+      
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.open('GET', location, true);
+
+        xmlhttp.onreadystatechange = function () {
+
+            if (xmlhttp.readyState == 4) {
+
+                if (xmlhttp.status == 200) {
+
+                    alert(xmlhttp.responseText);
+
+                }
+            }
+        };
+
+    };  
+
 </script>
   
-<button onclick ="APILocation()">
+<button onclick ="APILocation2()">
          GET API Request
       </button>
   
