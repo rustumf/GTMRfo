@@ -10,9 +10,13 @@ var url = new URL('https://rustumf.github.io/GTMRfo/?key=123&value=5001');
 
 var params = url.searchParams; 
 
-var name = params.get('name');
+var key = params.get('key');
+var value = params.get('value');
 
-alert("Hello " + name);
+
+alert("key " + key);
+alert("value " + value);
+
 </script>
 
 </body>
