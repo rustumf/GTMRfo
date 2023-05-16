@@ -5,7 +5,8 @@
 <h1>GTM Test v3</h1>
   
 <script>
-// use window.location.href to get the current page URL in live project
+// URL to Paste in search and change param values if need be
+// https://rustumf.github.io/GTMRfo/?key=123&value=5001
 
 var docurl = document.URL;
 var url = new URL(docurl);
@@ -18,8 +19,14 @@ var key = params.get('key');
 var value = params.get('value');
 
 
-alert("key " + key);
-alert("value " + value);
+//alert("key " + key);
+//alert("value " + value);
+  
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'key': key,
+ 'value': value
+});
 
 </script>
 
