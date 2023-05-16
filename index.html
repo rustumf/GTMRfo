@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>GTM Test v11</h1>
+<h1>GTM Test v12</h1>
   
 <script>
 // URL to Paste in search and change param values if need be
@@ -26,14 +26,19 @@ dataLayer = [];
 // Push values GTM data layer
 dataLayer.push({'key': key_val, 'value': value_val});
   
- alert("from DL " + dataLayer[0].key);
- alert("from DL " + dataLayer[0].value);
+alert("from DL " + dataLayer[0].key);
+alert("from DL " + dataLayer[0].value);
 
+//function to setting the location using the Javascript 
+function APILocation() {
+            location = "https://httpbin.org/get?key=123&value=5001";   
+};
   
 </script>
   
-<button onclick="location.href='https://httpbin.org/get?key=123&value=5001'" type="button">
-         GET API Request</button>
+<button onclick ="APILocation()">
+         GET API Request
+      </button>
   
 </body>
 </html>
