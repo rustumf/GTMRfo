@@ -1,14 +1,18 @@
-<h1>hellow GTM v4</h1>
-<script>
-  
-var params = url.searchParams; 
-  
-var key = params.get('key');
-var value = params.get('value');
-  
-alert("key " + key);
-alert("value " + value);
+<!DOCTYPE html>
+<html>
+<body>
 
+<script>
+var url = new URL('http://example.com?name=nick');
+// use window.location.href to get the current page URL in live project
+
+var params = url.searchParams; 
+
+var name = params.get('name');
+
+alert("Hello " + name);
 </script>
 
+</body>
+</html>
 
