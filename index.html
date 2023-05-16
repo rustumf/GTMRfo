@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>GTM Test v5</h1>
+<h1>GTM Test v6</h1>
   
 <script>
 // URL to Paste in search and change param values if need be
@@ -22,12 +22,15 @@ alert("value " + value_val);
   
 // Initialize GTM data layer
 dataLayer = [];
-
+  
 // Push values GTM data layer
 dataLayer.push({'key': key_val, 'value': value_val});
   
 </script>
-
+  
+<button onclick="location.href='https://httpbin.org/get?key=123&value=5001'" type="button">
+         GET API Request</button>
+  
 </body>
 </html>
 
