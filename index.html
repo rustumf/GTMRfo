@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>GTM Test v14</h1>
+<h1>GTM Test v15</h1>
   
 <script>
 // URL to Paste in search and change param values if need be
@@ -40,7 +40,7 @@ function APILocation() {
         location = "https://httpbin.org/get?key=" + dataLayer[0].key + "&value=" + dataLayer[0].value;
       
         let xmlhttp = new XMLHttpRequest();
-        xmlhttp.open('GET', location, true);
+        xmlhttp.open('POST', location, true);
 
         xmlhttp.onreadystatechange = function () {
 
