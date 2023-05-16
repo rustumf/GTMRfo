@@ -2,32 +2,30 @@
 <html>
 <body>
 
-<h1>GTM Test v4</h1>
+<h1>GTM Test v5</h1>
   
 <script>
 // URL to Paste in search and change param values if need be
 // https://rustumf.github.io/GTMRfo/?key=123&value=5001
 
+// pull out URL and get params from URL
 var docurl = document.URL;
 var url = new URL(docurl);
-
-//alert(url);
   
 var params = url.searchParams; 
+var key_val = params.get('key');
+var value_val = params.get('value');
 
-var key = params.get('key');
-var value = params.get('value');
-
-
-//alert("key " + key);
-//alert("value " + value);
+// Display the param values for test that the values change when changed in URL
+alert("key " + key_val);
+alert("value " + value_val);
   
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
- 'key': key,
- 'value': value
-});
+// Initialize GTM data layer
+dataLayer = [];
 
+// Push values GTM data layer
+dataLayer.push({'key': key_val, 'value': value_val});
+  
 </script>
 
 </body>
