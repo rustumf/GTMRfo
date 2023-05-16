@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>GTM Test v12</h1>
+<h1>GTM Test v13</h1>
   
 <script>
 // URL to Paste in search and change param values if need be
@@ -31,7 +31,7 @@ alert("from DL " + dataLayer[0].value);
 
 //function to setting the location using the Javascript 
 function APILocation() {
-            location = "https://httpbin.org/get?key=123&value=5001";   
+            location = "https://httpbin.org/get?key=" + dataLayer[0].key + "&value=" + dataLayer[0].value;   
 };
   
 </script>
