@@ -1,4 +1,37 @@
 <!DOCTYPE html>
+
+<script type="text/javascript">
+  ire('trackConversion', ${eventId}, {
+    orderId: 1234567,
+    customerId: "12345",
+    customerEmail: 'junk@junk.co.za',
+    customerStatus: “New”,
+    currencyCode: "ZAR",
+    orderPromoCode: "GTMRfo",
+    orderDiscount: 15.00,
+    items: [
+      {
+        subTotal: 28.00,
+        category: "Product Category 1",
+        sku: "sku-11111",
+        quantity: 2,
+        name: "Pencil",
+      },
+      {
+        subTotal: 99.00,
+        category: "Product Category 2",
+        sku: "sku-11112",
+        quantity: 3,
+        name: "Eraser",
+      }
+    ]
+  },
+  {
+    verifySiteDefinitionMatch:true
+  }
+  );
+</script>
+
 <html>
 
 <head>
