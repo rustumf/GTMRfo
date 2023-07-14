@@ -55,7 +55,7 @@
   
 <script>
 // URL to Paste in search and change param values if need be
-// https://rustumf.github.io/GTMRfo/?key=123&value=5001
+// https://rustumf.github.io/GTMRfo/?orderId=123&customerId=5001
 
 // pull out URL
 var docurl = document.URL;
@@ -63,13 +63,13 @@ var url = new URL(docurl);
   
 // get params from URL
 var params = url.searchParams; 
-var key_val = params.get('key');
-var value_val = params.get('value');
+var orderId_val = params.get('orderId');
+var customerId_val = params.get('customerId');
 
 // Display the param values for test that the values change when changed in URL
 // Test that values change when URL is changed, but only as a test  
-//alert("key " + key_val);
-//alert("value " + value_val);
+alert("orderId -->" + orderId_val);
+alert("customerId -->" + customerId_val);
   
 // Initialize data layer
 // Initialize with each change
@@ -99,9 +99,46 @@ function APILocation() {
   };
   xhttp.open("GET", "https://httpbin.org/get?key=" + dataLayer[0].key + "&value=" + dataLayer[0].value, true);
   xhttp.send();
-}
+};
 
+// function API request
+function UTT_TrackerEvent() {
+    ire('trackConversion', 39057 /* this is the ID of the Event ID */, {
+    orderId: orderId_val,
+    customerId: customerId_val,
+    customerEmail: '',
+    customerStatus: "New",
+    currencyCode: "ZAR",
+    orderPromoCode: "GTMRfo",
+    orderDiscount: 1.00,
+    items: [
+      {
+        subTotal: 21.00,
+        category: "Product Category 3",
+        sku: "sku-11111",
+        quantity: 1,
+        name: "Book",
+      },
+      {
+        subTotal: 9.00,
+        category: "Product Category 4",
+        sku: "sku-11112",
+        quantity: 1,
+        name: "Binder",
+      }
+    ]
+  },
+  {
+    verifySiteDefinitionMatch:true
+  }
+  );
+};
+  
 </script>
+
+<button onclick ="UTT_TrackerEvent()">
+         UTT Integration
+</button>
   
 <button onclick ="APILocation()">
          GET API Request
