@@ -19,7 +19,7 @@
 <!-- The identify function is used to identify users as accurately across your site -->
   
 <script type="text/javascript">
-               ire('identify', {customerId: '', customerEmail: ''});
+               ire('identify', {customerId: '10001', customerEmail: 'test@test.com'});
 </script>
 
 <!-- The trackConversion function is used on your site order confirmation page to track the conversion data of an online sale and report it to impact.com -->
@@ -28,26 +28,26 @@
 <script type="text/javascript">
   ire('trackConversion', 39382, {
     orderId: "",
-    customerId: "",
-    customerEmail: '',
+    customerId: "10001",
+    customerEmail: 'test@test.com',
     customerStatus: "New",
     currencyCode: "ZAR",
-    orderPromoCode: "GTMRfo",
+    orderPromoCode: "ChildTest",
     orderDiscount: 1.00,
     items: [
       {
-        subTotal: 21.00,
-        category: "Product Category 3",
-        sku: "sku-11111",
-        quantity: 1,
-        name: "Book",
+        subTotal: 23.00,
+        category: "Product Category 33",
+        sku: "sku-1333",
+        quantity: 3,
+        name: "Books",
       },
       {
-        subTotal: 9.00,
-        category: "Product Category 4",
-        sku: "sku-11112",
+        subTotal: 94.00,
+        category: "Product Category 44",
+        sku: "sku-444",
         quantity: 1,
-        name: "Binder",
+        name: "Binders",
       }
     ]
   },
