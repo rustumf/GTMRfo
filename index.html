@@ -81,6 +81,24 @@ var customerId_val = params.get('customerId');
 // Initialize data layer
 // Initialize with each change
 dataLayer = [];
+
+dataLayertest = 
+[
+    {
+        subTotal: 30.00,
+        category: "Product Category 33",
+        sku: "sku-1333",
+        quantity: 1,
+        name: "Books",   
+    },
+    {
+        subTotal: 50.00,
+        category: "Product Category 44",
+        sku: "sku-1444",
+        quantity: 1,
+        name: "Binders",
+    }
+]
   
 // Push values data layer
 dataLayer.push({'key': orderId_val, 'value': customerId_val});
@@ -132,10 +150,28 @@ function UTT_TrackerEvent() {
   }
   );
 };
-  
+
+// function API request
+function UTT_TrackerEventTest() {
+    ire('trackConversion', 39382 /* this is the ID of the Event ID */, {
+    orderId: orderId_val,
+    customerId: customerId_val,
+    customerEmail: '',
+    customerStatus: "New",
+    currencyCode: "ZAR",
+    orderPromoCode: "GTMRfo",
+    orderDiscount: 1.00,
+    items: dataLayertest
+  },
+  {
+    verifySiteDefinitionMatch:true
+  }
+  );
+};
+
 </script>
 
-<button onclick ="UTT_TrackerEvent()">
+<button onclick ="UTT_TrackerEventTest()">
          UTT Integration
 </button>
   
