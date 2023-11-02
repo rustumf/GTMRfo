@@ -183,10 +183,30 @@ function UTT_TrackerEventTest() {
   );
 };
 
+  // function API request
+function GTM_TrackerEventTest() {
+    ire('trackConversion', 39382 /* this is the ID of the Event ID */, {
+    orderId: "{{orderId}}",
+    customerId: "{{customerId}}",
+    customerEmail: '',
+    customerStatus: "{{customerStatus}}",
+    currencyCode: "{{currencyCode}}"
+    items: dataLayertest
+  },
+  {
+    verifySiteDefinitionMatch:true
+  }
+  );
+};
+  
 </script>
 
 <button onclick ="UTT_TrackerEventTest()">
          UTT Integration
+</button>
+
+  <button onclick ="GTM_TrackerEventTest()">
+         GTM Integration
 </button>
   
 <button onclick ="APILocation()">
