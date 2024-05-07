@@ -132,17 +132,18 @@ function APILocation() {
   xhttp.send();
 };
 
-// function API request
+// function JS request
 function UTT_TrackerEvent() {
-    ire('trackConversion', 39057 /* this is the ID of the Event ID */, {
-    orderId: "orderId_MediaPartnerJS",
+    ire('trackConversion', 39382 /* this is the ID of the Event ID */, {
+    orderId: "JSMEdia 1",
     customerId: "",
     customerEmail: "",
     customerStatus: "New",
     currencyCode: "ZAR",
     orderPromoCode: "GTMRfo",
     orderDiscount: 1.00,
-    mediaId: 1111,
+    /*mediaId: 1111,*/
+    mediaPartnerId: 1111, 
     clickid: "",
     items: [
       {
@@ -165,6 +166,9 @@ function UTT_TrackerEvent() {
     verifySiteDefinitionMatch:true
   }
   );
+
+  alert("Done");
+  
 };
 
 // function API request
