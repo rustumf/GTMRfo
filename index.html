@@ -135,8 +135,8 @@ function APILocation() {
 // function API request
 function UTT_TrackerEvent() {
     ire('trackConversion', 39057 /* this is the ID of the Event ID */, {
-    orderId: orderId_MediaPartnerJS,
-    customerId: customerId_val,
+    orderId: "orderId_MediaPartnerJS",
+    customerId: "",
     customerEmail: "",
     customerStatus: "New",
     currencyCode: "ZAR",
@@ -204,7 +204,7 @@ function GTM_TrackerEventTest() {
 </script>
 
 <button onclick ="UTT_TrackerEvent()">
-         UTT Integration MP2
+         UTT Integration MP3
 </button>
 
   <button onclick ="GTM_TrackerEventTest()">
