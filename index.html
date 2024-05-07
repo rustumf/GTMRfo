@@ -134,14 +134,15 @@ function APILocation() {
 
 // function API request
 function UTT_TrackerEvent() {
-    ire('trackConversion', 39382 /* this is the ID of the Event ID */, {
-    orderId: orderId_val,
+    ire('trackConversion', 39057 /* this is the ID of the Event ID */, {
+    orderId: orderId_MediaPartnerJS,
     customerId: customerId_val,
     customerEmail: '',
     customerStatus: "New",
     currencyCode: "ZAR",
     orderPromoCode: "GTMRfo",
     orderDiscount: 1.00,
+    mediaId: 1111  
     items: [
       {
         subTotal: 30.00,
